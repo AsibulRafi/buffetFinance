@@ -1,0 +1,211 @@
+.accountsTypes {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../images/accountsBG.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.6;
+  }
+  &__wrapper {
+    padding: 20rem 15rem;
+    position: relative;
+    z-index: 100;
+    @media screen and (max-width: 1500px) {
+      padding: 20rem 5rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 20rem 4rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 15rem 2rem;
+    }
+  }
+
+  // Content
+  &__content {
+    color: #fff;
+    text-align: center;
+    h2 {
+      font-size: 5rem;
+      font-weight: 500;
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      @include breakpoint-down(small) {
+        font-size: 3.5rem;
+      }
+    }
+    p {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 40px;
+      margin-bottom: 5rem;
+      @include breakpoint-down(medium) {
+        font-size: 18px;
+        line-height: 35px;
+      }
+      @include breakpoint-down(small) {
+        font-size: 1.4rem;
+        line-height: 25px;
+      }
+    }
+    &-btn {
+      display: inline-block;
+      font-family: "Barlow", sans-serif;
+      font-size: 2rem;
+      font-weight: 500;
+      margin-right: 2rem;
+      padding: 1.4rem 4rem;
+      letter-spacing: 0.1em;
+      background: #2a9ef4;
+      box-shadow: 6px 6px 4px rgba(255, 255, 255, 0.25);
+      border-radius: 5px;
+      color: #fff;
+      text-transform: uppercase;
+
+      @include breakpoint-down(small) {
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+        letter-spacing: 0;
+      }
+      &:hover {
+        transition: transform 0.5s ease-out;
+        transform: translateY(-5px);
+      }
+    }
+  }
+}
+.accountFunding {
+  padding: 10rem 15rem;
+  @media screen and (max-width: 1500px) {
+    padding: 10rem 5rem;
+  }
+  @include breakpoint-down(medium) {
+    padding: 8rem 4rem;
+  }
+  @include breakpoint-down(small) {
+    padding: 8rem 2rem 14rem;
+  }
+  &__heading {
+    margin-bottom: 2rem;
+    text-align: center;
+    h2 {
+      font-size: 4rem;
+      font-weight: 500;
+      color: #2a9ef4;
+      margin-bottom: 2rem;
+      @include breakpoint-down(small) {
+        font-size: 3rem;
+      }
+    }
+    p {
+      font-size: 1.6rem;
+      @include breakpoint-down(small) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  &__content {
+    margin-top: 5rem;
+
+    &-cards {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @include breakpoint-down(medium) {
+        flex-wrap: nowrap;
+        flex-direction: column;
+      }
+      &-single {
+        background-color: #2a9ef4;
+        border-radius: 5px;
+        padding: 3rem 2rem;
+        width: 380px;
+        margin-bottom: 10rem;
+        @include breakpoint-down(medium) {
+          width: 100%;
+        }
+        h1 {
+          font-size: 7rem;
+          color: #fff;
+          margin-bottom: 1rem;
+          @include breakpoint-down(small) {
+            font-size: 5rem;
+          }
+        }
+        h2 {
+          font-size: 2rem;
+          color: #fff;
+          margin-bottom: 2rem;
+          @include breakpoint-down(small) {
+            font-size: 1.8rem;
+          }
+        }
+        p {
+          font-size: 14px;
+          color: #fff;
+          line-height: 24px;
+        }
+      }
+    }
+    &-info {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      @include breakpoint-down(medium) {
+        flex-direction: column;
+      }
+      &-single {
+        &:first-child {
+          margin-right: 10rem;
+          @include breakpoint-down(medium) {
+            margin-right: 0rem;
+            margin-bottom: 5rem;
+          }
+        }
+        h2 {
+          font-size: 2.5rem;
+          font-weight: 500;
+          margin-bottom: 2rem;
+          color: #2a9ef4;
+          @include breakpoint-down(small) {
+            font-size: 2rem;
+          }
+        }
+        p {
+          font-size: 1.4rem;
+          margin-bottom: 1rem;
+        }
+        .accountFunding__content-info-div {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          margin-block: 2rem;
+          i {
+            font-size: 1.4rem;
+            color: #447ffd;
+            margin-right: 1rem;
+          }
+          p {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}

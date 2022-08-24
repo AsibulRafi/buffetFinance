@@ -1,0 +1,224 @@
+.trading__glossary {
+  width: 100%;
+  height: 100%;
+  background-color: #2a9ef4;
+
+  &__wrapper {
+    padding: 20rem 20rem 10rem;
+    @media screen and (max-width: 1500px) {
+      padding: 20rem 5rem 10rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 20rem 4rem 10rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 15rem 2rem 10rem;
+    }
+  }
+  &__heading {
+    text-align: center;
+    font-size: 7rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    font-weight: 600;
+    @media screen and (max-width: 1400px) {
+      font-size: 5rem;
+    }
+    @include breakpoint-down(medium) {
+      font-size: 4.5rem;
+    }
+    @include breakpoint-down(small) {
+      font-size: 3rem;
+    }
+  }
+
+  &__subheading {
+    text-transform: uppercase;
+    margin-bottom: 10rem;
+    font-size: 3.5rem;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    @media screen and (max-width: 1400px) {
+      font-size: 3rem;
+    }
+    @include breakpoint-down(medium) {
+      font-size: 2rem;
+    }
+  }
+  &__content {
+    ::-webkit-scrollbar {
+      height: 10px;
+      background-color: #eaeaea;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px #e3e3e3;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: #000;
+    }
+    &-alphabet {
+      display: flex;
+      &-scrollbar {
+        margin: 0 auto;
+        overflow-y: hidden;
+        overflow-x: scroll;
+
+        &__wrapper {
+          padding-bottom: 2rem;
+          display: flex;
+        }
+      }
+      .tg_text {
+        width: auto;
+        font-size: 2.5rem;
+        font-weight: 700;
+        font-family: "Raleway", sans-serif;
+        background: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+        padding: 1.8rem 2rem;
+        text-align: center;
+        margin-inline: 2rem;
+        cursor: pointer;
+      }
+      .tg__active {
+        width: auto;
+        font-size: 2.5rem;
+        font-weight: 700;
+        font-family: "Raleway", sans-serif;
+
+        padding: 1.8rem 2rem;
+        text-align: center;
+        margin-inline: 2rem;
+        cursor: pointer;
+        background-color: #000;
+        color: #fff;
+      }
+      p {
+        width: auto;
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: "Public Sans";
+        background: transparent;
+        border: 2px solid #333;
+        padding: 1.8rem 2rem;
+        text-align: center;
+        margin-inline: 2rem;
+        @include breakpoint-down(small) {
+          font-size: 1.6rem;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
+.accordion__section {
+  margin-top: 10rem;
+  padding-inline: 10rem;
+  @include breakpoint-down(medium) {
+    padding-inline: 4rem;
+  }
+  @include breakpoint-down(small) {
+    padding-inline: 2rem;
+  }
+  .accordion__container {
+    .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      border-radius: 5px;
+      margin-block: 2rem;
+      background-color: #fff;
+
+      h1 {
+        font-family: "Raleway", sans-serif;
+        font-size: 3rem;
+        color: #000;
+        @include breakpoint-down(small) {
+          font-size: 1.6rem;
+        }
+      }
+      span {
+        color: #000;
+        font-size: 2rem;
+      }
+    }
+    .accordion__dropDown {
+      p {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: #fff;
+        text-align: center;
+        margin-block: 5rem;
+        @include breakpoint-down(small) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+.calender {
+  background: #f3f8ff;
+  text-align: center;
+  padding: 20rem 20rem;
+  @media screen and (max-width: 1500px) {
+    padding: 20rem 5rem;
+  }
+  @include breakpoint-down(medium) {
+    padding: 20rem 4rem;
+  }
+  @include breakpoint-down(small) {
+    padding: 15rem 2rem;
+  }
+  &__heading {
+    h2 {
+      font-size: 5rem;
+      font-weight: 500;
+      @media screen and (max-width: 1400px) {
+        font-size: 4rem;
+      }
+      @include breakpoint-down(medium) {
+        font-size: 3.5rem;
+      }
+      @include breakpoint-down(small) {
+        font-size: 2.5rem;
+      }
+    }
+    hr {
+      width: 30rem;
+      margin-block: 5rem;
+      border: 2px solid #00aefe;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      @include breakpoint-down(small) {
+        width: 100%;
+      }
+    }
+  }
+  img {
+    @include breakpoint-down(medium) {
+      width: 100%;
+    }
+  }
+}
+.tradingview-widget-container {
+  overflow: hidden;
+}

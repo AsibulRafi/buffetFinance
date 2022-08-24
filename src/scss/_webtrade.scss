@@ -1,0 +1,141 @@
+.webTrader {
+  width: 100%;
+  height: 100%;
+  background: #2a9ef4;
+  &__wrapper {
+    padding: 20rem 20rem;
+    @media screen and (max-width: 1500px) {
+      padding: 20rem 5rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 20rem 4rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 15rem 2rem;
+    }
+  }
+  &__heading {
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 10rem;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    @media screen and (max-width: 1400px) {
+      font-size: 5rem;
+    }
+    @include breakpoint-down(medium) {
+      font-size: 4.5rem;
+    }
+    @include breakpoint-down(small) {
+      font-size: 3rem;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &-text {
+      flex-basis: 50%;
+      margin-right: 5rem;
+      @include breakpoint-down(medium) {
+        margin-right: 0rem;
+        margin-bottom: 5rem;
+        text-align: center;
+      }
+      h2 {
+        font-size: 4rem;
+        color: #fff;
+        font-weight: 500;
+        margin-bottom: 3rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        @include breakpoint-down(medium) {
+          font-size: 3.5rem;
+        }
+        @include breakpoint-down(small) {
+          font-size: 2.8rem;
+        }
+      }
+      p {
+        font-size: 1.8rem;
+        line-height: 40px;
+        color: #fff;
+        @include breakpoint-down(small) {
+          font-size: 1.5rem;
+          line-height: 24px;
+        }
+      }
+      .button-container {
+        @include breakpoint-down(medium) {
+          justify-content: center;
+        }
+        .button1 {
+          background-color: #fff;
+          color: #000;
+        }
+        .button2 {
+          background-color: transparent;
+          border: 2px solid #fff;
+          color: #fff;
+        }
+      }
+    }
+    &-img {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &-details {
+    padding: 10rem 20rem;
+    @media screen and (max-width: 1500px) {
+      padding: 10rem 5rem;
+    }
+    @include breakpoint-down(medium) {
+      padding: 8rem 4rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 5rem 1rem;
+    }
+
+    @include breakpoint-down(medium) {
+      margin-left: 0rem;
+      margin-top: 4rem;
+    }
+    h2 {
+      color: #2a9ef4;
+      font-size: 3rem;
+      margin-bottom: 10rem;
+      font-weight: 500;
+      text-align: center;
+    }
+    &-flex {
+      display: flex;
+      @include breakpoint-down(medium) {
+        flex-direction: column;
+      }
+      ul {
+        margin-left: 5rem;
+        flex-basis: 50%;
+        li {
+          font-size: 1.6rem;
+          font-weight: 500;
+          margin-block: 1rem;
+          color: #000;
+          @include breakpoint-down(small) {
+            font-size: 1.4rem;
+          }
+        }
+        li::marker {
+          font-size: 3rem;
+          color: #00aefe;
+        }
+      }
+    }
+  }
+}
